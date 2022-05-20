@@ -1,0 +1,168 @@
+body {
+    background: #ebe7e7;
+    margin: 0;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1.2rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Oswald", sans-serif;
+  }
+  
+  figure {
+    margin: 0;
+  }
+
+  
+  .siteheader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .site-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Oswald", sans-serif;
+    font-size: 5rem;
+    font-weight: 200;
+  }
+  
+  .siteheader:after {
+    display: block;
+    margin: 4rem 0;
+    content: "⚍⚌⚍";
+  }
+  
+  .maincontent {
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 60rem;
+  }
+  
+  .page-header {
+    margin-bottom: 3rem;
+  }
+  
+  .page-header__heading {
+    margin-top: -1rem;
+    text-align: center;
+  }
+  
+  .page-header:after {
+    margin: 4rem auto;
+    display: block;
+    content: "";
+    border-bottom: 3px solid black;
+    width: 4rem;
+  }
+  
+  .flashlight {
+    margin-bottom: 4rem;
+    /* padding-bottom: rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 0 3rem;
+  }
+  
+  .flashlight:after {
+    margin: 0 auto;
+    padding-top: 4rem;
+    display: block;
+    grid-column: span 2;
+    content: "";
+    border-bottom: 3px solid black;
+    width: 4rem;
+  }
+  
+  .flashlight__image {
+    grid-row: span 2;
+  }
+  
+  .flashlight__name {
+    margin-top: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    font-size: 5rem;
+    line-height: 1;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+  }
+  
+  .flashlight__features {
+    margin: 0;
+    padding: 2rem 0 0 0;
+    list-style-type: none;
+  }
+  
+  .flashlight__features li {
+    padding: 0.2rem 0;
+  }
+  
+  /* Subgrid. See https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid */
+  @supports (grid-template-columns: subgrid) {
+    .flashlight__features {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0 1rem;
+    }
+  
+    .flashlight__features li {
+      display: grid;
+      grid-column: span 2;
+      grid-template-columns: subgrid;
+    }
+  }
+
+  .light-toggle {
+    margin-top: 10px;
+    padding: 14px 28px;
+    color: #4c705c;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    background-color: #95d5b2;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+      -4px -4px 10px rgba(255, 255, 255, 0.8);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+ 
+
+  .light-toggle-other {
+    background-color: #fbc4ab;
+    color:#be7654;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2),
+      inset -4px -4px 10px rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+
+  .flashlight__lid {
+    color: #f95738
+  }
+
+  .flashlight__lid-other {
+    color: #52b788;
+  }
+
+  
+  .sitefooter {
+    margin-top: 8rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: white;
+  }
